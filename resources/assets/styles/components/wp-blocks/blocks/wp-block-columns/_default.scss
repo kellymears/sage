@@ -1,4 +1,4 @@
-@mixin wp-block-columns__default {
+%wp-block-columns__default {
   @for $columns from 1 to 12 {
     &.has-#{$columns}-columns,
     > li {

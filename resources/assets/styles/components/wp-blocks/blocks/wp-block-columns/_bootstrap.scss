@@ -1,4 +1,4 @@
-@mixin wp-block-columns__bootstrap {
+%wp-block-columns__bootstrap {
   @extend .row;
 
   @for $columns from 1 to 12 {

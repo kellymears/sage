@@ -2,13 +2,7 @@
 @import "bootstrap";
 
 @mixin wp-block-columns($framework) {
-  @if ($framework=="bootstrap") {
-    @include wp-block-columns__bootstrap;
-  }
-
-  @else {
-    @include wp-block-columns__default;
-  }
+  @extend %wp-block-columns__#{$framework};
 
   @include debug;
 }
