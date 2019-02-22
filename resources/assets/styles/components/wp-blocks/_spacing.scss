@@ -21,8 +21,8 @@
   margin-left: auto;
   margin-right: auto;
 
-  @media (min-width: #{$wp-blocks-container-md}) {
-    width: $wp-blocks-wide-align-width;
-    max-width: $wp-blocks-wide-align-max-width;
+  @media (min-width: #{wp-blocks-container(md)}) {
+    width: wp-blocks-wide-align-width();
+    max-width: wp-blocks-wide-align-max-width();
   }
 }

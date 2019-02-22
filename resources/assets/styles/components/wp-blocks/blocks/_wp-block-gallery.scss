@@ -1,4 +1,4 @@
-.wp-block-gallery {
+.wp-blocks .wp-block-gallery {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
@@ -38,11 +38,11 @@
       justify-content: center;
       width: 100%;
       margin: 0;
-      padding: ($wp-blocks-spacing / 3) ($wp-blocks-spacing / 2);
-      color: $wp-blocks-color-white;
+      padding: (wp-blocks-spacer() / 3) (wp-blocks-spacer() / 2);
+      color: wp-blocks-color("white");
       text-align: center;
       opacity: 80%;
-      background: rgba($wp-blocks-color-black, 0.4);
+      background: wp-blocks-color(muted);
     }
 
     figcaption img {
@@ -61,7 +61,7 @@
     }
   }
 
-  @media (min-width: #{$wp-blocks-container-md}) {
+  @media (min-width: #{wp-blocks-container(md)}) {
     @for $i from 3 through 8 {
       &.columns-#{ $i } .blocks-gallery-image,
       &.columns-#{ $i } .blocks-gallery-item {

@@ -1,0 +1,10 @@
+@mixin wp-block-columns__default {
+  @extend .row;
+
+  @for $columns from 1 to 12 {
+    &.has-#{$columns}-columns,
+    > li {
+      @extend .col-md;
+    }
+  }
+}

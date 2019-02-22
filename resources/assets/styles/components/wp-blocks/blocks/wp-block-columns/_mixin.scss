@@ -1,0 +1,18 @@
+@import "default";
+@import "bootstrap";
+
+@mixin wp-block-columns($framework) {
+  @if ($framework: "bootstrap") {
+    @include wp-block-columns__bootstrap;
+  }
+
+  @else {
+    @include wp-block-columns__default;
+  }
+
+  @if (map_get(map_get($wp-blocks-options, debug), enabled)) {
+    @if (map_get(map_get(map_get($wp-blocks-options, debug), settings), border)) {
+      border: 1px dotted rgba(255, 0, 0, 0.6);
+    }
+  }
+}

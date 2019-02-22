@@ -1,7 +1,7 @@
-.wp-block-table {
+.wp-blocks .wp-block-table {
   display: block;
   width: 100%;
-  margin-bottom: $wp-blocks-spacing;
+  margin-bottom: wp-blocks-spacer();
 
   tbody {
     display: table;
@@ -9,6 +9,6 @@
 
   tr:first-child td {
     position: relative;
-    padding-right: $wp-blocks-spacing;
+    padding-right: wp-blocks-spacer();
   }
 }

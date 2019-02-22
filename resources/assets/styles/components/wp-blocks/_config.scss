@@ -1,0 +1,45 @@
+/**
+ * WP Block Editor Config
+ *
+ * Available frameworks:
+ *   - bootstrap
+ *   - default (no framework)
+ *
+ **/
+$wp-blocks-options: (
+  framework: "bootstrap",
+  container: (
+    md: 600px,
+    lg: 768px,
+    xl: 900px,
+  ),
+  breakpoint: (
+    md: 576px,
+    lg: 676px,
+    xl: 992px,
+  ),
+  spacer: 30px,
+  fontsize: (
+    md: 1rem,
+    lg: 1.25rem,
+    xl: 2rem,
+  ),
+  colors: (
+    primary: map-get($theme-colors, primary),
+    white: rgba(255, 255, 255, 1),
+    black: rgba(0, 0, 0, 1),
+    muted: rgba(0, 0, 0, 0.2),
+  ),
+  blocks: (
+    wide-align: (
+      width: 80%,
+      max-width: 1400px,
+    ),
+  ),
+  debug: (
+    enabled: 1,
+    settings: (
+      border: 1,
+    ),
+  )
+);

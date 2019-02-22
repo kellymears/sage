@@ -1,10 +1,10 @@
-.wp-block-separator {
+.wp-blocks .wp-block-separator {
   display: block;
   clear: both;
-  margin: $wp-blocks-spacing auto;
+  margin: wp-blocks-spacer() auto;
   padding: 0;
   background: transparent;
-  border-bottom: 1px solid $wp-blocks-color-muted;
+  border-bottom: 1px solid wp-blocks-color(muted);
   opacity: 0.6;
 
   &.is-style-wide {
@@ -23,9 +23,9 @@
 
   &.is-style-dots::before {
     content: "\00b7 \00b7 \00b7";
-    color: $wp-blocks-color-muted;
+    color: wp-blocks-color(muted);
     font-size: $font-size-base*2;
-    letter-spacing: $wp-blocks-spacing;
+    letter-spacing: wp-blocks-spacer();
     font-family: serif;
   }
 }

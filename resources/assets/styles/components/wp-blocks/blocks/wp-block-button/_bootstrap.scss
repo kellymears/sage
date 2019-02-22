@@ -1,0 +1,34 @@
+@mixin wp-block-button__bootstrap {
+  .wp-block-button__link {
+    @extend .btn;
+    @extend .btn-dark;
+  }
+
+  &.alignleft {
+    @extend .text-left;
+  }
+
+  &.alignright {
+    @extend .text-right;
+  }
+
+  &.aligncenter {
+    @extend .text-center;
+  }
+
+  &.alignleft .wp-block-button__link {
+    @include float-left;
+
+    @extend .mr-1;
+  }
+
+  &.alignright .wp-block-button__link {
+    @include float-right;
+
+    @extend .ml-1;
+  }
+
+  &.aligncenter .wp-block-button__link {
+    margin-bottom: (wp-blocks-spacer() / 2);
+  }
+}

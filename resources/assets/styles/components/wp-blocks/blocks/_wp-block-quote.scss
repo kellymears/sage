@@ -1,6 +1,6 @@
-.wp-block-pullquote {
-  margin-top: $wp-blocks-spacing;
-  margin-bottom: $wp-blocks-spacing;
+.wp-blocks .wp-block-pullquote {
+  margin-top: wp-blocks-spacer();
+  margin-bottom: wp-blocks-spacer();
 
   blockquote > p {
     @extend .mt-0;
@@ -9,21 +9,21 @@
   &.alignwide,
   &.alignfull {
     display: block;
-    padding-left: $wp-blocks-spacing;
-    padding-right: $wp-blocks-spacing;
+    padding-left: wp-blocks-spacer();
+    padding-right: wp-blocks-spacer();
   }
 
   &.alignwide p,
   &.alignfull p {
-    font-size: $wp-blocks-font-lg;
+    font-size: wp-blocks-font-size(lg);
     text-align: center;
   }
 
   &.alignwide blockquote,
   &.alignfull blockquote {
-    margin-top: $wp-blocks-spacing;
-    margin-bottom: $wp-blocks-spacing;
-    font-size: $wp-blocks-font-md;
+    margin-top: wp-blocks-spacer();
+    margin-bottom: wp-blocks-spacer();
+    font-size: wp-blocks-font-size(md);
   }
 
   &.alignwide blockquote p,
@@ -52,7 +52,7 @@
 
   &.alignleft > blockquote {
     float: left;
-    margin-right: ($wp-blocks-spacing * 2);
+    margin-right: (wp-blocks-spacer() * 2);
   }
 
   &.alignright {
@@ -61,35 +61,35 @@
 
   &.alignright blockquote {
     float: right;
-    margin-left: ($wp-blocks-spacing * 2);
+    margin-left: (wp-blocks-spacer() * 2);
   }
 
   figure:not(.alignleft, .alignright) {
-    padding-left: $wp-blocks-spacing;
-    padding-right: $wp-blocks-spacing;
+    padding-left: wp-blocks-spacer();
+    padding-right: wp-blocks-spacer();
   }
 }
 
-.wp-block-quote {
-  margin-top: $wp-blocks-spacing;
-  margin-bottom: $wp-blocks-spacing;
-  font-size: $wp-blocks-font-md;
+.wp-blocks .wp-block-quote {
+  margin-top: wp-blocks-spacer();
+  margin-bottom: wp-blocks-spacer();
+  font-size: wp-blocks-font-size(md);
 
   &.is-large blockquote p {
-    font-size: $wp-blocks-font-lg;
+    font-size: wp-blocks-font-size(lg);
   }
 
   &.is-large blockquote cite {
-    font-size: $wp-blocks-font-md;
+    font-size: wp-blocks-font-size(md);
   }
 
   &.alignwide blockquote p,
   &.alignfull blockquote p {
-    font-size: $wp-blocks-font-lg;
+    font-size: wp-blocks-font-size(lg);
     text-align: center;
   }
 
   &.alignwide blockquote cite {
-    font-size: $wp-blocks-font-md;
+    font-size: wp-blocks-font-size(md);
   }
 }
