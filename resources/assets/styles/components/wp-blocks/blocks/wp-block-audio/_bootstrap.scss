@@ -1,0 +1,13 @@
+%wp-block-audio__bootstrap {
+  audio {
+    @extend .db;
+    @extend .mx-auto;
+
+    border-radius: $border-radius-lg;
+  }
+
+  figcaption {
+    @extend .text-center;
+    @extend .font-italic;
+  }
+}

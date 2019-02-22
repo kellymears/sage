@@ -1,44 +1,11 @@
-@mixin wp-blocks-contain() {
-  width: 100%;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: wp-blocks-spacing();
-  padding-right: wp-blocks-spacing();
-
-  @media (min-width: #{wp-blocks-breakpoint(lg)}) {
-    max-width: wp-blocks-container(lg);
-    padding-left: initial;
-    padding-right: initial;
-  }
-
-  @media (min-width: #{wp-blocks-breakpoint("xl")}) {
-    max-width: wp-blocks-container("xl");
-    padding-left: initial;
-    padding-right: initial;
-  }
+@function wp-blocks-spacer() {
+  @return map-get($wp-blocks-options, spacer);
 }
 
-@each $name, $color in $theme-colors {
-  .has-#{$name}-color {
-    color: $color;
-  }
-
-  .has-#{$name}-background-color::before {
-    background-color: $color;
-  }
-
-  @for $i from 1 through 10 {
-    .has-background-dim.has-background-dim-#{ $i * 10 }::before {
-      background-color: rgba($color, $i * 0.1);
-    }
-  }
-}
-
-@function wp-blocks-spacing() {
-  @return map-get($wp-blocks-options, spacing);
-}
-
+/**
+ * @param media-size
+ * ("sm", "md", "lg", "xl")
+ **/
 @function wp-blocks-breakpoint($media-size) {
   @return map-get(map-get($wp-blocks-options, breakpoint), $media-size);
 }
@@ -65,4 +32,25 @@
 
 @function wp-blocks-color($color) {
   @return map-get(map-get($wp-blocks-options, colors), $color);
+}
+
+/**
+ * debugger
+ **/
+@mixin debug($component: null) {
+  @if (map_get(map_get($wp-blocks-options, debug), enabled) == 1) {
+    @if (map_get(map_get(map_get($wp-blocks-options, debug), settings), border) == 1) {
+      border: 1px dotted rgba(255, 0, 0, 0.6);
+    }
+  }
+
+  @if (map_get(map_get(map_get($wp-blocks-options, debug), console), enabled)) {
+    @if (map_get(map_get(map_get($wp-blocks-options, debug), console), display-config)) {
+      @debug $wp-blocks-options;
+    }
+
+    @if ($component) {
+      @debug $component;
+    }
+  }
 }

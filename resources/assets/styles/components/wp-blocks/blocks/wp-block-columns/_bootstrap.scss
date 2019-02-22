@@ -1,23 +1,10 @@
 @mixin wp-block-columns__bootstrap {
+  @extend .row;
+
   @for $columns from 1 to 12 {
     &.has-#{$columns}-columns,
     > li {
-      display: grid;
-      grid-column-gap: wp-blocks-spacer();
-
-      @media (min-width: #{wp-blocks-container(md)}) {
-        @if $columns <= 3 {
-          grid-template-columns: repeat($columns, 1fr);
-        }
-
-        @else if $columns > 3 {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
+      @extend .col-md;
     }
-  }
-
-  .wp-block-column {
-    grid-column: (auto, 1fr);
   }
 }

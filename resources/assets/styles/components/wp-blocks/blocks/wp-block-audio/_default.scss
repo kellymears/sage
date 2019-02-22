@@ -1,0 +1,13 @@
+%wp-block-audio__default {
+  audio {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: $border-radius-lg;
+  }
+
+  figcaption {
+    text-align: center;
+    font-style: italic;
+  }
+}

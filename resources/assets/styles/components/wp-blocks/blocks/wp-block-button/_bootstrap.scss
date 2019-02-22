@@ -1,4 +1,4 @@
-@mixin wp-block-button__bootstrap {
+%wp-block-button__bootstrap {
   .wp-block-button__link {
     @extend .btn;
     @extend .btn-dark;

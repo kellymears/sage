@@ -1,14 +1,14 @@
-@mixin wp-block-button__default {
+%wp-block-button__default {
   .wp-block-button__link {
     display: inline-block;
     padding: (wp-blocks-spacer() / 2) wp-blocks-spacer();
-    text-align: center;
     white-space: nowrap;
     vertical-align: middle;
     user-select: none;
     cursor: pointer;
+    text-align: center;
     text-decoration: none;
-    color: wp-blocks-color("white");
+    color: wp-blocks-color(white);
     background-color: wp-blocks-color(primary);
     border-color: wp-blocks-color(primary);
   }

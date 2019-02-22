@@ -1,0 +1,5 @@
+@import "mixin";
+
+.wp-blocks .wp-block-audio {
+  @include wp-block-audio(map-get($wp-blocks-options, framework));
+}

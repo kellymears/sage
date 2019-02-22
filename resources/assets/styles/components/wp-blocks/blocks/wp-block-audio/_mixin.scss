@@ -1,0 +1,8 @@
+@import "default";
+@import "bootstrap";
+
+@mixin wp-block-audio($framework) {
+  @extend %wp-block-audio__#{$framework};
+
+  @include debug;
+}

@@ -7,11 +7,12 @@
  *
  **/
 $wp-blocks-options: (
-  framework: "bootstrap",
+  framework: "default",
   container: (
     md: 600px,
     lg: 768px,
     xl: 900px,
+    xxl: 1200px,
   ),
   breakpoint: (
     md: 576px,
@@ -38,6 +39,10 @@ $wp-blocks-options: (
   ),
   debug: (
     enabled: 1,
+    console: (
+      enabled: 1,
+      display-config: 1,
+    ),
     settings: (
       border: 1,
     ),

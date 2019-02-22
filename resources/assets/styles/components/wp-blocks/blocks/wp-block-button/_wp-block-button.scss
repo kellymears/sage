@@ -1,5 +1,7 @@
 @import "mixin";
 
 .wp-blocks .wp-block-button {
-  @include wp-block-button(map-get($wp-blocks-options, framework));
+  @include wp-block-button(
+    map-get($wp-blocks-options, framework)
+  );
 }
