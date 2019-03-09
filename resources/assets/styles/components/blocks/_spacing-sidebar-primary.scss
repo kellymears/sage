@@ -1,0 +1,60 @@
+> .entry-content > *:not(.wp-block-wrap) {
+  max-width: 100vw;
+  padding-left: $wp-blocks-spacing;
+  padding-right: $wp-blocks-spacing;
+
+  @media (max-width: #{$wp-blocks-container-md}) {
+    width: 80%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: #{$wp-blocks-container-md}) {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: #{$wp-blocks-container-xl}) {
+    width: $wp-blocks-container-xl;
+    margin-left: auto;
+    margin-right: ($wp-blocks-spacing * 3);
+  }
+}
+
+.wp-block-wrap {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.wp-block-wrap > .alignfull {
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.wp-block-wrap > .alignwide {
+  width: 100%;
+  max-width: none;
+
+  @media (min-width: #{$wp-blocks-container-md}) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: #{$wp-blocks-container-xl}) {
+    max-width: 95%;
+  }
+}
+
+header,
+footer,
+#comments {
+  max-width: 100vw;
+}

@@ -5,24 +5,26 @@
 .wp-block-wrap {
   margin-left: 0;
   margin-right: 0;
-  padding-left: 0;
-  padding-right: 0;
   width: 100%;
   max-width: none;
 }
 
 .wp-block-wrap > .alignfull {
-  width: 100vw;
+  width: 100%;
   margin-left: 0;
   margin-right: 0;
 }
 
 .wp-block-wrap > .alignwide {
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  max-width: none;
 
   @media (min-width: #{$wp-blocks-container-md}) {
-    width: $wp-blocks-wide-align-width;
-    max-width: $wp-blocks-wide-align-max-width;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: #{$wp-blocks-container-xl}) {
+    max-width: 95%;
   }
 }

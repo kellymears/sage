@@ -12,8 +12,8 @@
 // @import "~some-node-module";
 
 /** Import theme styles */
-@import "common/global";
 @import "components/wp-blocks";
+@import "common/global";
 @import "components/comments";
 @import "components/forms";
 @import "layouts/header";

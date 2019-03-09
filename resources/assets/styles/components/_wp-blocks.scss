@@ -2,7 +2,6 @@
 
 /** styles */
 .wp-blocks {
-  @import "blocks/spacing";
   @import "blocks/colors";
   @import "blocks/wp-block-audio";
   @import "blocks/wp-block-button";
@@ -17,4 +16,12 @@
   @import "blocks/wp-block-table";
   @import "blocks/lists";
   @import "blocks/preformatted";
+}
+
+body.sidebar-primary .wp-blocks {
+  @import "blocks/spacing-sidebar-primary";
+}
+
+body:not(.sidebar-primary) .wp-blocks {
+  @import "blocks/spacing";
 }

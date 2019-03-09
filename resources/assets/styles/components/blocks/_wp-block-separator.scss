@@ -1,15 +1,18 @@
 .wp-block-separator {
-  display: block;
+  display: inline-block;
   clear: both;
-  margin: $wp-blocks-spacing auto;
-  padding: 0;
+  margin-top: $wp-blocks-spacing;
+  margin-bottom: $wp-blocks-spacing;
+  padding-left: 0;
+  padding-right: 0;
   background: transparent;
   border-bottom: 1px solid wp-blocks-color("light");
   opacity: 0.6;
+  max-width: 100%;
 
   &.is-style-wide {
-    max-width: 80vw;
-    width: 80vw;
+    max-width: 80%;
+    width: 80%;
   }
 
   &.is-style-dots {
