@@ -53,6 +53,7 @@ array_map(function ($file) use ($sage_error) {
     $file = "app/{$file}.php";
     if (! locate_template($file, true, true)) {
         $sage_error(
+            /* translators: %s: Path of the missing file */
             sprintf(__('Error locating <code>%s</code> for inclusion.', 'sage'), $file),
             __('File not found', 'sage')
         );
